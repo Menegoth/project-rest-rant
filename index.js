@@ -9,7 +9,7 @@ app.use("/places", require("./controllers/places"));
 
 //homepage test
 app.get("/", (req, res) => {
-    res.send("test");
+    res.send("Hello World!");
 });
 
 //404 page
