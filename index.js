@@ -1,15 +1,17 @@
 //require dependencies 
 require("dotenv").config();
-
 const express = require("express");
 const app = express();
+
+app.set("view engine", "jsx");
+app.engine("jsx", require("express-react-views").createEngine());
 
 //import places controller
 app.use("/places", require("./controllers/places"));
 
 //homepage test
 app.get("/", (req, res) => {
-    res.send("Hello World!");
+    res.render("home");
 });
 
 //404 page
