@@ -2,3 +2,13 @@ h1 {
     text-align: center;
     color: cornflowerblue;
 }
+
+.default-wrapper {
+    min-height: 100%;
+    margin-bottom: -50px;
+}
+
+.footer, .push {
+    padding-top: 2vh;
+    height: 50px;
+}

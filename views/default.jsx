@@ -10,7 +10,11 @@ function Def (html) {
                 <link rel="stylesheet" href="/css/style.css" />
             </head>
             <body>
-                {html.children}
+                <div className="default-wrapper">
+                    {html.children}
+                    <div className="push"></div>
+                </div>
+                <footer className="footer">Made By Antonio Monteiro</footer>
             </body>
         </html>
     )

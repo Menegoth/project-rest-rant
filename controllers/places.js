@@ -8,6 +8,7 @@ router.get("/new", (req, res) => {
 
 //POST places
 router.post("/", (req, res) => {
+    console.log(req.body);
     if (!req.body.pic) {
         //default image
         req.body.pic = "http://placekitten.com/400/400"
@@ -20,7 +21,6 @@ router.post("/", (req, res) => {
         //default state
         req.body.state = "USA";
     }
-    console.log(req.body);
     places.push(req.body);
     res.redirect("/places");
 });
