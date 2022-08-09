@@ -6,7 +6,7 @@ function home() {
     return (
         <Def>
             <main>
-                <h1>HOME</h1>
+                <h1>REST-Rant</h1>
                 <div>
                     <img src="/images/chia-fruit-drink.jpg" alt="Chia Fruit Shake" className="mx-auto d-block"/>
                     <div className="text-center">
@@ -14,7 +14,7 @@ function home() {
                     </div>
                 </div>
                 <a href="/places">
-                    <button className="btn-primary mx-auto d-block">Places Page</button>
+                    <button className="btn-primary btn-lg mx-auto d-block">Places Page</button>
                 </a>
             </main>
         </Def>
