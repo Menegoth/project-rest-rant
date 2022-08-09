@@ -5,6 +5,11 @@ router.get("/new", (req, res) => {
     res.render("places/new");
 });
 
+//POST places
+router.post("/", (req, res) => {
+    res.send("POST /places");
+});
+
 //GET places
 router.get("/", (req, res) => {
     //test objects
