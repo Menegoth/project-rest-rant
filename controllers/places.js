@@ -7,6 +7,7 @@ router.get("/new", (req, res) => {
 
 //POST places
 router.post("/", (req, res) => {
+    console.log(req.body);
     res.send("POST /places");
 });
 
