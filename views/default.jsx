@@ -1,11 +1,12 @@
-//dependencies
-const React = require("react");
+const React = require('react')
 
-function Def(html) {
+function Def (html) {
     return (
         <html>
             <head>
                 <title>Title</title>
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"/>
+                <link rel="stylesheet" href="/css/style.css" />
             </head>
             <body>
                 {html.children}
@@ -14,5 +15,4 @@ function Def(html) {
     )
 }
 
-//export
-module.exports = Def;
+module.exports = Def
