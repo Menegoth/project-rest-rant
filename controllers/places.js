@@ -1,5 +1,10 @@
 const router = require("express").Router();
 
+//GET places/new
+router.get("/new", (req, res) => {
+    res.render("places/new");
+});
+
 //GET places
 router.get("/", (req, res) => {
     //test objects
