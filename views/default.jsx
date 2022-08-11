@@ -23,10 +23,8 @@ function Def (html) {
                         </li>
                     </ul>
                 </nav>
-                <main>
                     {html.children}
                     <div className="push"></div>
-                </main>
             </body>
         </html>
     )
