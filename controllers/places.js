@@ -3,7 +3,7 @@ const places = require("../models/places.js");
 
 //GET places/new
 router.get("/new", (req, res) => {
-    res.status(303).res.render("places/new");
+    res.status(303).render("places/new");
 });
 
 //GET places/:id
@@ -14,9 +14,22 @@ router.get("/:id", (req, res) => {
     } else if (!places[id]) {
         res.status(404).render("error404");
     } else {
-        res.status(303).render("places/show", { place: places[id] });
+        res.status(303).render("places/show", { place: places[id], id });
     }
 });
+
+//DELETE places
+router.delete("/:id", (req, res) => {
+    let id = Number(req.params.id);
+    if (isNaN(id)) {
+        res.status(404).render("error404");
+    } else if (!places[id]) {
+        res.status(404).render("error404");
+    } else {
+        places.splice(id, 1);
+        res.status(302).redirect("/places");
+    }
+})
 
 //POST places
 router.post("/", (req, res) => {
@@ -34,7 +47,7 @@ router.post("/", (req, res) => {
         req.body.state = "USA";
     }
     places.push(req.body);
-    res.redirect("/places");
+    res.status(302).redirect("/places");
 });
 
 //GET places

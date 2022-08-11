@@ -37,3 +37,24 @@ nav a:hover {
     color: pink;
     text-decoration: none;
 }
+
+.place-image, .place-info {
+    display: inline-block;
+    min-width: 50%;
+}
+
+.place-name {
+    color: darkslateblue;
+    font-size: 6em;
+}
+
+.ratings-header, .description-header, .comments-header {
+    color: darkturquoise;
+    font-size: 3em;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: darkslategray;
+}
