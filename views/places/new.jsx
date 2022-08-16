@@ -17,6 +17,10 @@ function new_form() {
                         <input id="pic" name="pic" type="url" className="form-control"/>
                     </div>
                     <div className="form-group">
+                        <label htmlFor="founded">Founded Year</label>
+                        <input className="form-control" id="founded" name="founded" />
+                    </div>
+                    <div className="form-group">
                         <label htmlFor="city">City</label>
                         <input id="city" name="city" className="form-control"/>
                     </div>
