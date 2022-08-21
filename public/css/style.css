@@ -38,7 +38,7 @@ nav a:hover {
     text-decoration: none;
 }
 
-.place-image, .place-info {
+.image-div, .place-info {
     display: inline-block;
     min-width: 50%;
 }
