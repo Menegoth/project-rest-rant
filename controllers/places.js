@@ -92,22 +92,32 @@ router.get('/:id', (req, res) => {
 
 //PUT /:id
 router.put('/:id', (req, res) => {
-  res.send('PUT /places/:id stub');
+  db.Place.findByIdAndUpdate(req.params.id, req.body)
+  .then(() => {
+    res.redirect(`/places/${req.params.id}`)
+  })
+  .catch(err => {
+    console.log("err", err)
+    res.render("error404")
+  })
 })
 
 //DELETE /:id
 router.delete('/:id', (req, res) => {
-  res.send('DELETE /places/:id stub');
+  db.Place.findByIdAndDelete(req.params.id)
+  .then(place => {
+    res.redirect("/places")
+  })
+  .catch(err => {
+    console.log("err", err);
+    res.render("error404");
+  })
 })
 
 //GET /:id/edit
-router.get('/:id/edit', (req, res) => {
-  res.send('GET edit form stub');
-})
-
-//POST /:id/rant
-router.post('/:id/rant', (req, res) => {
-  res.send('GET /places/:id/rant stub');
+router.get('/:id/edit', async (req, res) => {
+  let place = await db.Place.findById(req.params.id)
+  res.render("places/edit", {place})
 })
 
 //DELETE /:id/rant/:rantId
